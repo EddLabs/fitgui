@@ -83,12 +83,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download ${{ matrix.file_type }}
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: ${{ matrix.file_type }}
         path: ${{ matrix.output_dir }}
     - name: Download release
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: release
     - name: Set Release Environment Variables
